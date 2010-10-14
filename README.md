@@ -37,7 +37,8 @@ Binding a handler to setData allows us to see what value a user tried to store i
 <pre>
 $(el).bind('changeData.foo', function(x, key, val) {
     // this function is called whenever a 'foo' namespaced value is changed
-    // in the datastore.
+    // in the datastore of x.  In this case, x is either $(el), or a member
+    // of the collection el.
 });
 </pre>
 
