@@ -33,14 +33,14 @@
 	if (data) {
 	    if (options && options.only) {
 		$.each(data, function(key, val) {
-		    if (_.include(options.only, key)) {
+		    if ($.inArray(key, options.only) !== -1) {
 			var ns = name ? key + '.' + name : key;
 			$this.data(ns, val);
 		    }
 		});
 	    } else if (options && options.except) {
 		$.each(data, function(key, val) {
-		    if (!_.include(options.only, key)) {
+		    if ($.inArray(key, options.except) === -1) {
 			var ns = name ? key + '.' + name : key;
 			$this.data(ns, val);
 		    }
