@@ -65,23 +65,23 @@ returns a shallow copy of el's data in the datastore under the namespace name.
 
 For example, suppose
 <pre>
-$(el).data() === {
+$(el).data() => {
     "name": "Mark",
     "age": 22,
     "bar.foo": [1,2,3],
     "baz.foo": {a: 2, b: 3},
     "jon.foo": null,
     "whats.so": {"fuck": "then"}
-};
+}
 </pre>
 
 then:
 <pre>
-$(el).dump('foo') === {
+$(el).dump('foo') => {
     "bar": [1,2,3],
     "baz": {a: 2, b: 3},
     "jon": null
-};
+}
 </pre>
 
 If $(el) is not a single element, but rather a collection of elements, this function returns an array of shallow copies of the data in the datastore under the namespace name.
