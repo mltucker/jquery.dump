@@ -32,7 +32,7 @@ additional namespace benefits
 
 In addition to preventing name clashes among plugins, namespacing datastore keys allows us to bind special event handlers that get called when data for our plugin is accessed or mutated.  The events are 'getData.#{plugin}', 'setData.#{plugin}', and 'changeData.#{plugin}'.
 
-Binding a handler to setData allows us to see what value a user tried to store in the datastore.  Binding a handler to getData allows us to see when a user attempts to retrieve data from the datastore, and have the option to have the user receive a different value.  Binding a handler to changeData allows us to react to data being changed in the datastore.
+Binding a handler to setData allows us to see what value a user tried to store in the datastore.  Binding a handler to getData allows us to see when a user attempts to retrieve data from the datastore, and have the option to have the user receive a different value.  Binding a handler to changeData (new in jquery 1.4.3) allows us to react to data being changed in the datastore.
 
 <pre>
 $(el).bind('changeData.foo', function(x, key, val) {
